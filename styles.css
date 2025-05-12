@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #e4fafc;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+}
+
+#play-button {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #a4e8ff;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+#play-button:hover {
+    transform: scale(1.1);
+    background-color: #61d0f6;
+}
+
+.hidden {
+    display: none;
+}
+
+#guess-input {
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Same font as result text */
+    border-radius: 10px;
+    border: 2px solid #61d0f6;
+    margin-top: 20px;
+    outline: none; /* Prevent outline color change on focus */
+}
+
+#guess-input:focus {
+    border-color: #61d0f6; /* Keep the border color the same when focused */
+}
+
+#guess-input::-webkit-outer-spin-button,
+#guess-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#guess-button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #61d0f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#guess-button:hover {
+    background-color: #4ab8e5;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    color: #61d0f6;
+    margin-top: 20px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Ensure font is the same as input */
+}
