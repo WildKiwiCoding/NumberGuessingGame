@@ -3,6 +3,7 @@ let randomNumber;
 document.getElementById("play-button").addEventListener("click", function() {
     randomNumber = Math.floor(Math.random() * 101);
     document.getElementById("game-container").classList.remove("hidden");
+    
     this.style.display = "none";
     document.getElementById("result").textContent = "";
 });
@@ -10,8 +11,13 @@ document.getElementById("play-button").addEventListener("click", function() {
 document.getElementById("guess-button").addEventListener("click", function() {
     const userGuess = parseInt(document.getElementById("guess-input").value);
     
+
     if (isNaN(userGuess)) {
         document.getElementById("result").textContent = "Please enter a valid number.";
+        setTimeout(function() {
+        // Code to be executed after the delay
+        document.getElementById("result").textContent = "";
+        }, 2000); // 3000 milliseconds = 3 seconds
     } else if (userGuess < 0 || userGuess > 100) {
         document.getElementById("result").textContent = "Please enter a number between 0 and 100.";
     } else {
@@ -28,5 +34,11 @@ document.getElementById("guess-button").addEventListener("click", function() {
         }
 
         document.getElementById("result").textContent = resultMessage;
+        setTimeout(function() {
+        // Code to be executed after the delay
+        document.getElementById("result").textContent = "";
+        }, 2000); // 3000 milliseconds = 3 seconds
+
+        
     }
 });
